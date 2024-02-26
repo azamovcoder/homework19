@@ -1,0 +1,222 @@
+body {
+    background-color: var(--secondaryColor);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 0;
+    z-index: 999;
+}
+
+
+.show__header__shrink {
+    padding: 15px 0;
+    box-shadow: 0px 0px 10px var(--hoverColor);
+    background: var(--secondaryColor);
+}
+
+.header__nav__logo a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    color:  #173A56;;
+}
+
+
+.header__nav__right,
+.header__nav__right__list,
+.header__nav__right__btns {
+    gap: 20px;
+}
+
+.header__nav__right__list__item {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 0px;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    position: relative;
+    transition: 0.2s;
+    color: var(--textColor);
+}
+
+.header__nav__right__list__item:hover {
+    font-weight: 800;
+    color: var(--primaryColor);
+}
+.header__nav__right__list__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    color: red;
+    display: none;
+}
+
+
+.btn {
+    padding: 6px 13px;
+    border: 2px solid var(--textColor);
+    background-color: transparent;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+    color: var(--textColor);
+}
+
+.btn:hover {
+    border-color:var(--hoverColor);
+    background:var(--hoverColor);
+    color:var(--secondaryColor);
+}
+
+.header__nav__right__btns__hamburger {
+    border: none;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    display: none;
+
+}
+
+.header__nav__right__btns__hamburger span {
+    width: 20px;
+    height: 2.5px;
+    background: var(--primaryColor);
+    border-radius: 2px;
+    transition: .4s;
+}
+
+.header__nav__right__btns__hamburger:hover 
+.header__nav__right__btns__hamburger__line {
+    background: var(--hoverColor);
+}
+
+.header__nav__right__btns__dark-mode {
+    border: none;
+    background: transparent;
+    color: var(--darkModeColor);
+    font-size: 18px;
+}
+
+.header__nav__right__btns__dark-mode .fa-sun {
+    display: none;
+}
+
+.dark .header__nav__right__btns__dark-mode .fa-moon {
+    display: none;
+}
+
+.dark .header__nav__right__btns__dark-mode .fa-sun {
+    display: block;
+}
+
+@media (max-width: 970px) {
+    .header__nav__right__list {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100vh;
+        background-color: var(--secondaryColor);
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        box-shadow: 0px 0px 15px var(--hoverColor);
+        transition: 0.3s;
+        z-index: 9999;
+    }
+
+    .header__nav__right__btns {
+        gap: 10px;
+    }
+
+    .header__nav__right__btns__hamburger{
+        display: flex;
+    }
+
+    .show__header__nav__right__list {
+        left: 0;
+    }
+
+    .header__nav__right__list__close {
+        display: block;
+    }
+}
+
+@media (max-width:500px) {
+    
+.header__nav__logo a{
+    gap: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--logoColor);
+}
+
+.header__nav__right__btns__contact {
+    padding: 6px 10px;
+    border: 2px solid var(--textColor);
+    background-color: transparent;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+    color: var(--textColor);
+}
+
+
+}@media (max-width:450px) {
+
+    .header__nav__logo a {
+        gap: 8px;
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--logoColor);
+    }
+
+    .header__nav__right__btns__contact {
+        padding: 5px 8px;
+        border: 2px solid var(--textColor);
+        background-color: transparent;
+        border-radius: 2px;
+        font-size: 14px;
+        font-weight: 600;
+        transition: 0.3s;
+        color: var(--textColor);
+    }
+
+
+
+
+}
+
+
+
+@media (max-width:400px) {
+
+    .header__nav__logo  span{
+       display: none;
+    }
+
+    .header__nav__right__btns__contact {
+        padding: 5px 8px;
+        border: 2px solid var(--textColor);
+        background-color: transparent;
+        border-radius: 2px;
+        font-size: 14px;
+        font-weight: 600;
+        transition: 0.3s;
+        color: var(--textColor);
+    }
+
+
+
+
+}
